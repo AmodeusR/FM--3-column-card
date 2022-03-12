@@ -1,0 +1,133 @@
+:root {
+  --primary-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-darker-cyan: hsl(179, 100%, 13%);
+
+  --neutral-white: hsla(0, 0%, 100%, 0.75);
+  --neutral-light-grey: hsl(0, 0%, 95%);
+  
+  --main-ff: "Lexend Deca";
+  --heading-ff: "Big Shoulders Display";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 4rem;
+  height: auto;
+}
+
+body {
+  font-family: var(--main-ff), sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  width: min(90%, 60em);
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  /* flex-direction: column; */
+  border-radius: 1rem;
+  margin-block: 4rem;
+  max-width: 25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  color: var(--neutral-white);
+  padding: 3rem;
+}
+
+.card:nth-child(1) {
+  background: var(--primary-orange);
+}
+
+.card:nth-child(2) {
+  background: var(--primary-dark-cyan);
+}
+
+.card:nth-child(3) {
+  background: var(--primary-darker-cyan);
+}
+
+.card__title {
+  font-family: var(--heading-ff), sans-serif;
+  font-size: 2.5rem;
+  color: var(--neutral-light-grey);
+  text-transform: uppercase;
+}
+
+.card__description {
+  margin: 0 0 4rem;
+  line-height: 1.8;
+}
+
+.card__cta {
+  --transition-time: 150ms;
+  --ease: ease;
+
+  font-family: var(--main-ff), sans-serif;
+  background: var(--neutral-light-grey);
+  padding: 1rem 2rem;
+  max-width: 10rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  mix-blend-mode: screen;
+  margin-top: auto;
+
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  transition:
+    background 150ms var(--ease),
+    color 150ms var(--ease);
+}
+
+.card__cta:hover {
+  color: white;
+  background: transparent;
+  font-weight: 400;
+
+  outline: 2px solid var(--neutral-light-grey);
+  outline-offset: -2px;
+}
+
+@media (min-width: 45em) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    max-width: 40rem;
+  }
+
+  .card:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+
+  .card__description {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 60rem;
+  }
+
+  .card:nth-child(1) {
+    grid-column: 1 / 2;
+  }
+}
+
+
+
