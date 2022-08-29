@@ -3,7 +3,7 @@
 
 ![Challenge preview](./design/desktop-preview.jpg)
 
-<p align="center">This is a solution to Frontend Mentor's <a href="">3 Column Card Component.</a></p>
+<p align="center">This is a solution to Frontend Mentor's <a href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-">3 Column Card Component.</a></p>
 
 <!-- markdownlint-enable MD033 -->
 
